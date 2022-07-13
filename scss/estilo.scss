@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 3%;
+  padding: 20px;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+  height: 100%;
+  background-size: cover;
+}
+
+.intro {
+  animation-name: intro;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+
+  @keyframes intro {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 94%;
+
+      background-size: cover;
+    }
+  }
+}
+
+header {
+  margin-bottom: 1%;
+  margin-right: 4%;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  grid-template-areas: "facu menu3" "facu idiomas";
+
+  h1 {
+    font-family: "Nothing You Could Do", cursive;
+    font-size: 3rem;
+
+    color: rgb(206, 204, 202);
+    grid-area: facu;
+  }
+  .idiomas {
+    justify-self: flex-end;
+    margin-right: 5%;
+    grid-area: idiomas;
+    ul {
+      text-align: end;
+      img {
+        height: 30px;
+        width: 30px;
+        object-fit: contain;
+      }
+    }
+    .menu4 {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      font-family: "Montserrat", sans-serif;
+      font-size: 20px;
+      text-align: center;
+      color: rgb(206, 204, 202);
+      align-content: center;
+      padding: 3px;
+    }
+
+    a {
+      color: rgb(206, 204, 202);
+      text-decoration: none;
+
+      display: inline;
+    }
+  }
+  li {
+    border: 2px;
+    border-color: white;
+    border-radius: 100%;
+    display: inline;
+  }
+  .menu4 :hover {
+    color: white;
+    background-color: rgb(12, 12, 112);
+    border-radius: 100%;
+  }
+  .menu3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    text-align: right;
+    color: rgb(206, 204, 202);
+
+    padding: 3px 2%;
+    grid-area: menu3;
+    a {
+      color: rgb(206, 204, 202);
+      text-decoration: none;
+      padding: 0px 5px;
+    }
+  }
+  li {
+    border: 2px;
+    border-color: white;
+    border-radius: 100%;
+    padding: 2%;
+  }
+  .menu3 :hover {
+    color: white;
+    background-color: rgb(12, 12, 112);
+    border-radius: 100%;
+  }
+}
+.imagenesflex {
+  .imagen {
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+    .imaginar {
+      opacity: 0.6;
+      transition: all 0.5s;
+    }
+
+    .imaginar:hover {
+      opacity: 1;
+      transform: rotate(360deg);
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
+main {
+  margin: 0px 0px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: bold;
+  color: rgb(206, 204, 202);
+  .imagen {
+    transition: all 0.5s;
+  }
+
+  h3 {
+    margin: 5%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+  }
+  section {
+    display: flex;
+
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10vh;
+    transition: all 1s;
+    .exp1 {
+      margin: 10px;
+      width: 200px;
+      height: 200px;
+      border: solid 5px rgb(196, 196, 196);
+      display: flex;
+
+      justify-content: space-around;
+      align-items: center;
+      background-color: #7f5a83;
+      background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+      transition: all 1s;
+    }
+    .exp1 {
+      grid-area: exp1;
+    }
+    .exp2 {
+      @extend .exp1;
+      grid-area: exp2;
+    }
+    .exp3 {
+      @extend .exp1;
+      grid-area: exp3;
+    }
+  }
+  section :hover {
+    width: 300px;
+    height: 300px;
+    font-size: 24px;
+    background-image: url(../imagenes/smg.png);
+    background-size: cover;
+    color: black;
+  }
+
+  .ro {
+    width: 80%;
+
+    align-content: center;
+    margin: 50px 10%;
+
+    display: grid;
+
+    justify-items: center;
+    column-gap: 10%;
+    p {
+      font-size: 2rem;
+      margin: 6%;
+    }
+
+    .freud {
+      grid-area: freud;
+      animation-name: desaparecer;
+      animation-timing-function: ease;
+      animation-delay: 0s;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes desaparecer {
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+  .informacion {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: left;
+    display: inline-block;
+    margin: 10px 30px;
+  }
+  .informacion2 {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: left;
+    display: none;
+    margin: 10px 30px;
+  }
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  padding: 3% 0px;
+  text-align: left;
+  color: rgb(206, 204, 202);
+  .link {
+    margin: 0px 3%;
+    padding: 0px 3%;
+    color: black;
+  }
+  a {
+    color: rgb(206, 204, 202);
+    text-decoration: none;
+    padding: 0px 5px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    grid-template-areas: "facu menu3" "facu idiomas";
+    justify-items: center;
+    .menu3 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    .menu4 {
+      li {
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  main {
+    .ro {
+      margin: 3%;
+      padding: 3%;
+      p {
+        font-size: 1.5rem;
+      }
+    }
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "exp1 exp2" "exp3 exp3";
+      justify-items: center;
+    }
+  }
+  .imagenesflex {
+    .imagen {
+      img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+      }
+      .imaginar {
+        opacity: 0.6;
+        transition: all 0.5s;
+      }
+
+      .imaginar:hover {
+        opacity: 1;
+        transform: rotate(360deg);
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    justify-items: center;
+    grid-template-areas: "facu menu3 idiomas";
+    justify-items: center;
+    h1 {
+      font-size: 2rem;
+    }
+    .menu3 {
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+    }
+    .menu4 {
+      font-size: 1rem;
+    }
+  }
+  .imagenesflex {
+    .imagen {
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+      .imaginar {
+        opacity: 0.6;
+        transition: all 0.5s;
+      }
+
+      .imaginar:hover {
+        opacity: 1;
+        transform: rotate(360deg);
+        width: 140px;
+        height: 140px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    .ro {
+      margin: 3%;
+
+      p {
+        font-size: 1rem;
+      }
+    }
+    section {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-areas: "exp1" "exp2" "exp3";
+      justify-items: center;
+      .exp1 {
+        width: 150px;
+        height: 150px;
+        font-size: 12px;
+      }
+    }
+    section :hover {
+      width: 200px;
+      height: 200px;
+      font-size: 16px;
+      background-image: url(../imagenes/smg.png);
+
+      color: black;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    .informacion {
+      display: none;
+    }
+    .informacion2 {
+      list-style: none;
+      margin-bottom: 20px;
+      text-align: left;
+      display: inline-block;
+      margin: 10px 30px;
+    }
+
+    h3 {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}
+
+.imagenesflex {
+  .imaginar {
+    height: 100px;
+    width: 100px;
+  }
+}
