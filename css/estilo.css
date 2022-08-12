@@ -9,6 +9,7 @@ body {
   background-color: #000000;
   background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
   height: 100%;
+  width: 90%;
   background-size: cover; }
 
 .intro {
@@ -32,6 +33,8 @@ header {
   grid-template-rows: 1fr 1fr;
   justify-items: center;
   grid-template-areas: "facu menu3" "facu idiomas"; }
+  header nav img {
+    display: none; }
   header h1 {
     font-family: "Nothing You Could Do", cursive;
     font-size: 3rem;
@@ -70,31 +73,34 @@ header {
     color: white;
     background-color: #0c0c70;
     border-radius: 100%; }
-  header .menu3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    list-style: none;
-    font-family: "Montserrat", sans-serif;
-    font-size: 20px;
-    text-align: right;
+
+.menu3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  text-align: right;
+  color: #ceccca;
+  padding: 3px 2%;
+  grid-area: menu3; }
+  .menu3 a {
     color: #ceccca;
-    padding: 3px 2%;
-    grid-area: menu3; }
-    header .menu3 a {
-      color: #ceccca;
-      text-decoration: none;
-      padding: 0px 5px; }
-  header li {
-    border: 2px;
-    border-color: white;
-    border-radius: 100%;
-    padding: 2%; }
-  header .menu3 :hover {
-    color: white;
-    background-color: #0c0c70;
-    border-radius: 100%; }
+    text-decoration: none;
+    padding: 0px 5px; }
+
+li {
+  border: 2px;
+  border-color: white;
+  border-radius: 100%;
+  padding: 2%; }
+
+.menu3 :hover {
+  color: white;
+  background-color: #0c0c70;
+  border-radius: 100%; }
 
 .imagenesflex .imagen img {
   width: 200px;
@@ -207,6 +213,8 @@ footer {
     color: #ceccca;
     text-decoration: none;
     padding: 0px 5px; }
+  footer .relleno {
+    display: none; }
 
 @media screen and (max-width: 1300px) {
   header {
@@ -240,6 +248,12 @@ footer {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "exp1 exp2" "exp3 exp3";
     justify-items: center; }
+  .expe :hover {
+    width: 230px;
+    height: 230px;
+    background-image: url(../imagenes/smg.png);
+    font-size: 18px;
+    color: black; }
   .imagenesflex .imagen img {
     width: 150px;
     height: 150px;
@@ -251,21 +265,42 @@ footer {
     opacity: 1;
     transform: rotate(360deg);
     width: 200px;
-    height: 200px; } }
+    height: 200px;
+    object-fit: contain; } }
 
 @media screen and (max-width: 768px) {
+  body {
+    height: 100%; }
   header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
     grid-template-areas: "facu menu3 idiomas";
     justify-items: center; }
-    header h1 {
-      font-size: 2rem; }
-    header .menu3 {
+    header nav img {
+      display: grid;
+      grid-area: menu3; }
+    header nav:hover .menu3 {
       display: flex;
       flex-direction: column;
-      font-size: 1rem; }
+      font-size: 1rem;
+      animation-name: intro;
+      animation-timing-function: ease;
+      animation-delay: 0s;
+      animation-duration: 1s;
+      animation-iteration-count: 1; }
+  @keyframes intro {
+    0% {
+      height: 0%; }
+    100% {
+      height: 85%; } }
+    header h1 {
+      font-size: 1.5rem; }
+    header .menu3 {
+      display: none;
+      flex-direction: column;
+      font-size: 1rem;
+      transition: all 0.5s; }
     header .menu4 {
       font-size: 1rem; }
   .imagenesflex .imagen img {
@@ -324,6 +359,7 @@ footer {
     height: 100px;
     width: 100px; }
   footer {
+    height: auto;
     font-family: "Montserrat", sans-serif;
     padding: 3% 0px;
     text-align: left;
@@ -331,4 +367,6 @@ footer {
     footer img {
       height: 40px;
       width: 40px;
-      object-fit: contain; } }
+      object-fit: contain; }
+    footer .relleno {
+      display: block; } }

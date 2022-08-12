@@ -10,6 +10,7 @@ body {
   background-color: #000000;
   background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
   height: 100%;
+  width: 90%;
   background-size: cover;
 }
 
@@ -41,6 +42,13 @@ header {
   justify-items: center;
   grid-template-areas: "facu menu3" "facu idiomas";
 
+  nav{
+    img{
+      display: none;
+    }
+  }
+ 
+  
   h1 {
     font-family: "Nothing You Could Do", cursive;
     font-size: 3rem;
@@ -90,6 +98,8 @@ header {
     background-color: rgb(12, 12, 112);
     border-radius: 100%;
   }
+  
+  }
   .menu3 {
     display: flex;
     flex-direction: row;
@@ -120,7 +130,7 @@ header {
     background-color: rgb(12, 12, 112);
     border-radius: 100%;
   }
-}
+
 .imagenesflex {
   .imagen {
     img {
@@ -268,193 +278,6 @@ footer {
     text-decoration: none;
     padding: 0px 5px;
   }
+  .relleno{display: none;}
 }
-
-@media screen and (max-width: 1300px) {
-  header {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: center;
-    grid-template-areas: "facu menu3" "facu idiomas";
-    justify-items: center;
-    .menu3 {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      font-size: 16px;
-    }
-    h1 {
-      font-size: 2rem;
-    }
-    .menu4 {
-      li {
-        a {
-          font-size: 16px;
-        }
-      }
-    }
-  }
-  footer {
-    img {
-      height: 70px;
-      width: 70px;
-      object-fit: contain;
-    }}
-    main {
-      .ro {
-        margin: 3%;
-        padding: 3%;
-        p {
-          font-size: 1.5rem;
-        }
-      }
-      section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "exp1 exp2" "exp3 exp3";
-        justify-items: center;
-      }
-    }
-    .imagenesflex {
-      .imagen {
-        img {
-          width: 150px;
-          height: 150px;
-          object-fit: contain;
-        }
-        .imaginar {
-          opacity: 0.6;
-          transition: all 0.5s;
-        }
-
-        .imaginar:hover {
-          opacity: 1;
-          transform: rotate(360deg);
-          width: 200px;
-          height: 200px;
-        }
-      }
-    }
-  }
-
-
-@media screen and (max-width: 768px) {
-  header {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    justify-items: center;
-    grid-template-areas: "facu menu3 idiomas";
-    justify-items: center;
-    h1 {
-      font-size: 2rem;
-    }
-    .menu3 {
-      display: flex;
-      flex-direction: column;
-      font-size: 1rem;
-    }
-    .menu4 {
-      font-size: 1rem;
-    }
-  }
-  .imagenesflex {
-    .imagen {
-      img {
-        width: 100px;
-        height: 100px;
-        object-fit: contain;
-      }
-      .imaginar {
-        opacity: 0.6;
-        transition: all 0.5s;
-      }
-
-      .imaginar:hover {
-        opacity: 1;
-        transform: rotate(360deg);
-        width: 140px;
-        height: 140px;
-      }
-    }
-  }
-}
-@media screen and (max-width: 768px) {
-  
-  main {
-    
-    .ro {
-      margin: 3%;
-
-      p {
-        font-size: 1rem;
-      }
-    }
-    section {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
-      grid-template-areas: "exp1" "exp2" "exp3";
-      justify-items: center;
-      .exp1 {
-        width: 150px;
-        height: 150px;
-        font-size: 12px;
-      }
-    }
-    section :hover {
-      width: 200px;
-      height: 200px;
-      font-size: 16px;
-      background-image: url(../imagenes/smg.png);
-
-      color: black;
-    }
-  }
-}
-
-@media screen and (max-width: 768px) {
-  main {
-    
-    .informacion {
-      display: none;
-    }
-    .informacion2 {
-      list-style: none;
-      margin-bottom: 20px;
-      text-align: left;
-      display: inline-block;
-      margin: 10px 30px;
-    }
-
-    h3 {
-      font-size: 16px;
-      text-align: center;
-    }
-  }
-  .imagenesflex {
-    .imagen {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .imaginar {
-      height: 100px;
-      width: 100px;
-    }
-  }
-  footer {
-    font-family: "Montserrat", sans-serif;
-    padding: 3% 0px;
-    text-align: left;
-    color: rgb(206, 204, 202);
-    img {
-      height: 40px;
-      width: 40px;
-      object-fit: contain;
-    }
-  }
-}
+@import "media"
