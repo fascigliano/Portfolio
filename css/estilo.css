@@ -27,7 +27,6 @@ body {
 
 header {
   margin-bottom: 1%;
-  margin-right: 4%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -196,6 +195,10 @@ footer {
   padding: 3% 0px;
   text-align: left;
   color: #ceccca; }
+  footer img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain; }
   footer .link {
     margin: 0px 3%;
     padding: 0px 3%;
@@ -222,6 +225,10 @@ footer {
       font-size: 2rem; }
     header .menu4 li a {
       font-size: 16px; }
+  footer img {
+    height: 70px;
+    width: 70px;
+    object-fit: contain; }
   main .ro {
     margin: 3%;
     padding: 3%; }
@@ -306,9 +313,22 @@ footer {
     display: inline-block;
     margin: 10px 30px; }
   main h3 {
-    font-size: 24px;
-    text-align: center; } }
-
-.imagenesflex .imaginar {
-  height: 100px;
-  width: 100px; }
+    font-size: 16px;
+    text-align: center; }
+  .imagenesflex .imagen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .imagenesflex .imaginar {
+    height: 100px;
+    width: 100px; }
+  footer {
+    font-family: "Montserrat", sans-serif;
+    padding: 3% 0px;
+    text-align: left;
+    color: #ceccca; }
+    footer img {
+      height: 40px;
+      width: 40px;
+      object-fit: contain; } }

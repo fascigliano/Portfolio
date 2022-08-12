@@ -34,7 +34,6 @@ body {
 
 header {
   margin-bottom: 1%;
-  margin-right: 4%;
   display: grid;
 
   grid-template-columns: 1fr 1fr;
@@ -253,6 +252,12 @@ footer {
   padding: 3% 0px;
   text-align: left;
   color: rgb(206, 204, 202);
+
+  img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+  }
   .link {
     margin: 0px 3%;
     padding: 0px 3%;
@@ -290,43 +295,50 @@ footer {
       }
     }
   }
-  main {
-    .ro {
-      margin: 3%;
-      padding: 3%;
-      p {
-        font-size: 1.5rem;
+  footer {
+    img {
+      height: 70px;
+      width: 70px;
+      object-fit: contain;
+    }}
+    main {
+      .ro {
+        margin: 3%;
+        padding: 3%;
+        p {
+          font-size: 1.5rem;
+        }
+      }
+      section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "exp1 exp2" "exp3 exp3";
+        justify-items: center;
       }
     }
-    section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: "exp1 exp2" "exp3 exp3";
-      justify-items: center;
-    }
-  }
-  .imagenesflex {
-    .imagen {
-      img {
-        width: 150px;
-        height: 150px;
-        object-fit: contain;
-      }
-      .imaginar {
-        opacity: 0.6;
-        transition: all 0.5s;
-      }
+    .imagenesflex {
+      .imagen {
+        img {
+          width: 150px;
+          height: 150px;
+          object-fit: contain;
+        }
+        .imaginar {
+          opacity: 0.6;
+          transition: all 0.5s;
+        }
 
-      .imaginar:hover {
-        opacity: 1;
-        transform: rotate(360deg);
-        width: 200px;
-        height: 200px;
+        .imaginar:hover {
+          opacity: 1;
+          transform: rotate(360deg);
+          width: 200px;
+          height: 200px;
+        }
       }
     }
   }
-}
+
 
 @media screen and (max-width: 768px) {
   header {
@@ -370,7 +382,9 @@ footer {
   }
 }
 @media screen and (max-width: 768px) {
+  
   main {
+    
     .ro {
       margin: 3%;
 
@@ -403,6 +417,7 @@ footer {
 
 @media screen and (max-width: 768px) {
   main {
+    
     .informacion {
       display: none;
     }
@@ -415,15 +430,31 @@ footer {
     }
 
     h3 {
-      font-size: 24px;
+      font-size: 16px;
       text-align: center;
     }
   }
-}
-
-.imagenesflex {
-  .imaginar {
-    height: 100px;
-    width: 100px;
+  .imagenesflex {
+    .imagen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .imaginar {
+      height: 100px;
+      width: 100px;
+    }
+  }
+  footer {
+    font-family: "Montserrat", sans-serif;
+    padding: 3% 0px;
+    text-align: left;
+    color: rgb(206, 204, 202);
+    img {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+    }
   }
 }
